@@ -1,0 +1,56 @@
+<html>
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    cursor: help;
+    cursor: progress;
+    cursor: url("/testurl"), auto
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    margin-top: 2rem;
+}
+
+.input-field input {
+    padding: 0.8rem;
+}
+
+form .input-field:first-child {
+    margin-bottom: 1.5rem;
+}
+
+form input[type="submit"] {
+    background: linear-gradient(to left, #4776E6, #8e54e9);
+    color: white;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: 0.4rem;
+}
+
+</style>
+<title>Sign up for Alloy</title>
+<link rel="icon" type="image/x-icon" href="/images?q=test.ico">
+<body>
+    <form action="/signup" method="post">
+        <h2>Login</h2>
+        <div class="input-field">
+            <input type="text" name="username" id="username" placeholder="Enter Username">
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="Enter Password">
+        </div>
+        <div class="input-field">
+            <input type="text" name="otp" id="otp" placeholder="Enter OTP (One-time Password)">
+        </div>
+        <input type="submit" value="Create Account">
+    </form>
+</body>
+</html>

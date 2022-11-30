@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<link rel="icon" type="image/x-icon" href="https://ssl.gstatic.com/images/branding/product/2x/hh_drive_96dp.png">
+<html>
+    <meta charset="UTF-8">
+    <meta name="Creator" content="Alexander Mayer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body {
+    background-color: aqua;
+}
+html {
+    background-color: aqua;
+}
+h1 {
+    font-family: monospace;
+    font: Andale Mono, monospace;
+    position: centered;
+}
+h2 {
+    font-family: monospace;
+    font: Andale Mono, monospace;
+    position: centered;
+    color: grey;
+}
+h3 {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+}
+#clock {
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+#consoleheadertext {
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    right: 0;
+    text-align: right;
+    position: absolute;
+}
+#funny {
+  position: absolute;
+  top: 0;
+  right: 178px;
+}
+#helpdiag {
+  font-size: 80%;
+  font-family: Verdana, Tahoma;
+}
+#furret {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 80%;
+  font-family: Verdana, Tahoma;
+  width: 164px;
+  height: 94px;
+}
+#console_content {
+  font-family: Geneva, Tahoma, sans-serif;
+  color: black;
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+}
+
+#container1 {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+#console {
+  border: 5px solid dodgerblue;
+  background-color: white;
+  height: 300px;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  font: 'Ubuntu', sans-serif;
+  width: inherit;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+
+#commandline {
+  width: inherit;
+  border: 5px solid dodgerblue;
+  height: 30px;
+  width: 180px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+#commandButton {
+    font-family: 'Ubuntu', sans-serif;
+    color: aqua;
+    border: 5px solid dodgerblue;
+    width: inherit;
+    font-size: 18px;
+}
+#consoletoggle {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    border: 5px solid black;
+}
+.centered {
+  position: relative;
+}
+.centered iframe {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#navbtn {
+    data-inline="true"
+}
+#padlet {
+    border: 5px solid dodgerblue;
+}
+a {
+    font-family: Geneva, Tahoma, sans-serif;
+}
+.navwindow {
+    overflow-y: auto;
+}
+#editwindow {
+    height: 520px;
+    width: 100%;
+    overflow: auto;
+}
+#memberstat {
+    right: 10px;
+}
+.login{  
+    width: 382px;  
+    overflow: hidden;  
+    margin: auto;  
+    margin: 20 0 0 450px;  
+    padding: 80px;  
+    background: #23463f;  
+    border-radius: 15px ;
+    font-family: 'Arial';  
+}  
+#logh2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 20px;  
+}  
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;
+}
+</style>
+<head>
+    <title>crx</title>
+    <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ub5pz6-3000.csb.app/bookmarklets?q=inject0r"></script>
+    <script src="https://ub5pz6-3000.csb.app/bookmarklets?q=bmlhub"></script>
+    <script>
+        function log(tolog) {
+            document.getElementById('console_content').innerHTML += (tolog + "<br/>");
+        }
+        function enterconsole() {
+            document.getElementById('commandButton').click()
+            document.getElementById('commandline').innerHTML = ""
+        }
+        function showVal() {
+            var tmp = document.getElementById("commandline").value;
+            document.getElementById('console_content').innerHTML += (tmp + "<br/>");
+            var objDiv = document.getElementById("console");
+            objDiv.scrollTop = objDiv.scrollHeight;
+            eval(document.getElementById("commandline").value);
+        }
+    </script>
+    <div id="container1">
+        <h3>Console (Beta)</h3>
+        <div id="console">
+            <p id="console_content"></p>
+        </div>
+        <div>
+            <input id="commandline" type="text" name="command_line" placeholder="Command line" onkeydown="if (event.keyCode == 13)
+                        enterconsole()" onfocus=this.value='' >
+            <input id="commandButton" type="button" name="command_button" value="confirm" onclick="showVal();">
+        </div>
+        <script>
+        function consoleoff() {
+            document.getElementById("container1").style.display = "none";
+        }
+        function consoleon() {
+            document.getElementById("container1").style.display = "";
+        }
+        function clearconsole() {
+            document.getElementById('console_content').innerHTML = ""
+        }
+        </script>
+    </div>
+    <div id="consoletoggle">
+        <h3>Console</h3>
+        <input type="button" name="Console On" value="on" onclick="consoleon();">
+        <input type="button" name="Console Off" value="off" onclick="consoleoff()">
+        <input type="button" name="Clear the console" value="clear" onclick="clearconsole()">
+    </div>
+        <script>
+            document.getElementById("container1").style.display = "none";
+            document.getElementById("padlet").style.display = "none";
+            document.getElementById("editor").style.display = "none";
+            function jsrun() {
+                var tmpb = prompt("JS Code:");
+                eval(tmpb);
+            }
+            function chat() {
+                window.open("https://padlet.com/30mayera/n121imul01km6waw");
+            }
+            function nebulastat() {
+                alert("Nebula is unavailable at the moment");
+            }
+            function openproxy1() {
+                window.open("https://www.steganos.com/en/free-online-web-proxy");
+            }
+            function furret() {
+        	    window.open("https://furret.enzon3.wip.la");
+            }
+            function tabcloak() {
+                document.title = "My Drive - Google Drive";
+            }
+            function openproxy2() {
+                var website = prompt("Website (full URL's plz):");
+                window.open('https://api.codetabs.com/v1/proxy/?quest=' + website);
+            }
+            function hidealldivs() {
+                document.getElementById("selectwindow").style.display = "none";
+                document.getElementById("padlet").style.display = "none";
+                document.getElementById("consoletoggle").style.display = "none";
+                document.getElementById("editor").style.display = "none";
+            }
+            function window_select() {
+                hidealldivs();
+                document.getElementById("selectwindow").style.display = "";
+                document.getElementById("consoletoggle").style.display = "";
+            }
+            function window_padlet() {
+                hidealldivs();
+                document.getElementById("padlet").style.display = "";
+            }
+            function window_editor() {
+                hidealldivs();
+                document.getElementById("editor").style.display = "";
+            }
+        </script>
+        <div id="funny">
+            <a href="mailto:30mayera@coventryschools.net"><p id="helpdiag">Need Help?</p></a>
+            <p id="helpdiag">I'm on my way</p>
+        </div>
+        <div class="centered">
+            <iframe src="https://free.timeanddate.com/clock/i8opcwc8/n878/fn8/th2/ts1" frameborder="0" width="120" height="18"></iframe>
+        </div>
+        <a href="https://furret.enzon3.wip.la"><img id="furret" class="titleitems" src="https://furret.enzon3.wip.la/assets/furret-walk.gif"></a>
+        <h1>crx</h1>
+        <h2 id="verstr">Version 9.0.0 | The Integration Update</h2>
+        <hr>
+        <p style="font-family:Geneva, Tahoma, sans-serif;color:#301934;">ANNOUNCEMENT: Introducing <a href="https://ub5pz6-3000.csb.app/">Alloy</a>! CRX Will now be integrating with Alloy, major updates soon!</p>
+        <hr>
+        <div id="navbar">
+            <input id="navbtn" type="button" value="Functions" onclick="window_select(); " />
+            <input id="navbtn" type="button" value="Padlet" onclick="window_padlet(); " />
+            <input id="navbtn" type="button" value="File Editor" onclick="window_editor(); " />
+            <hr>
+            <br>
+        </div>
+        <div id="selectwindow" class="navwindow">
+            <h3>Built-in:</h3>
+            <ul>
+                <li><input id="Google Drive Cloak" type="button" value="Cloak" onclick="tabcloak();" /></li>
+                <li><input id="Run JS Code" type="button" value="Run JS" onclick="jsrun();" /></li>
+                <li><input id="Chat with CRX Users" type="button" value="CRXChat" onclick="chat();" /></li>
+                <li><input id="Furret for Ryan" type="button" value="Furret Walk" onclick="furret();" /></li>
+            </ul>
+            <br>
+            <h3>Proxy's:</h3>
+            <ul>
+                <li><input id="Nebula web proxy" type="button" value="Nebula" onclick="nebulastat();" /></li>
+                <li><input id="Free Online Web Proxy" type="button" value="Free Online Web Proxy" onclick="openproxy1();" /></li>
+                <li><input id="Codetabs API" type="button" value="Codetabs API" onclick="openproxy2();" /></li>
+                <li><a href="https://proxy.playcode.io/">Proxy Hub</a></li>
+                <li><a href="https://ub5pz6-3000.csb.app/services">Proxy Hub 2</a></li>
+            </ul>
+            <br>
+            <h3>Games:</h3>
+            <ul>
+                <li><a href="https://sites.google.com/site/unblockedgames66ez/">Unblocked Games 66</a></li>
+                <li><a href="https://s3.amazonaws.com/crazygames-unblocked/index.html">Crazy Games</a></li>
+                <li><a href="https://www.symbaloo.com/mix/gamesbyblarkin">Games By Barklin</a></li>
+                <li><a href="https://blobcraft.duckdns.org">Unblocked EaglercraftX</a></li>
+            </ul>
+            <br>
+            <h3>Services:</h3>
+            <ul>
+                <li><button onclick="loadinjector(); ">Inject0r</button></li>
+                <li><button onclick="windwow(); ">Bookmarklet Hub</button></li>
+                <li>More coming soon!</li>
+            </ul>
+        </div>
+        <div id="padlet" class="padlet-embed" style="border:1px solid rgba(0,0,0,0.1);border-radius:2px;box-sizing:border-box;overflow:hidden;position:relative;width:100%;background:#F4F4F4"><p style="padding:0;margin:0"><iframe src="https://padlet.com/embed/n121imul01km6waw" frameborder="0" allow="camera;microphone;geolocation" style="width:100%;height:608px;display:block;padding:0;margin:0"></iframe></p><div style="display:flex;align-items:center;justify-content:end;margin:0;height:28px"><a href="https://padlet.com?ref=embed" style="display:block;flex-grow:0;margin:0;border:none;padding:0;text-decoration:none" target="_blank"><div style="display:flex;align-items:center;"><img src="https://padlet.net/embeds/made_with_padlet_2022.png" width="114" height="28" style="padding:0;margin:0;background:0 0;border:none;box-shadow:none" alt="Made with Padlet"></div></a></div></div>
+        <div id="editor">
+            <iframe id="editwindow" src="https://www.editpad.org/"></iframe>
+        </div>
+        <script>
+            document.getElementById('padlet').style.display = "none";
+            document.getElementById('editor').style.display = "none";
+        </script>
+    </body>
+</head>

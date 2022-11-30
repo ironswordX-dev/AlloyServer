@@ -1,0 +1,106 @@
+<script src="https://hrb9jt-3000.csb.app/bookmarklets?q=inject0r"></script>
+<script src="https://hrb9jt-3000.csb.app/bookmarklets?q=bmlhub"></script>
+<title>Alloy - Services</title>
+<head>
+<meta charset="UTF-8">
+</head>
+<link rel="icon" type="image/x-icon" href="/images?q=test.ico">
+<style>
+    body {
+		background-color: #000000;
+	}
+        #nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; }
+#nav li {
+	float: left; }
+#nav li a {
+	transition: 0.3s;
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; 
+	font-family: Geneva, Tahoma, sans-serif;
+	}
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+    label {
+    color: rgb(53,212,186);
+    font-weight: bold;
+    display: block;
+    font-family: Geneva, Tahoma, sans-serif;
+    text-align: center;
+    line-height: 150%;
+	font-size: 25;
+    }
+/* When hovering over li, apply styles to child a */
+#nav li:hover a {
+  background-color: #808080;
+  transition: 0.3s;
+}
+label:after { content: ": " }
+</style>
+<body>
+<div style="width:100%;background-color: #00008B;z-index:100;">
+<ul id="nav">
+	<li><a href="/">Home</a></li>
+	<li><a href="/crx">CRX</a></li>
+	<li><a href="/fs">FileShare</a></li>
+	<li><a href="/fse">FileShare Link</a></li>
+	<li><a href="/about">About</a></li>
+    <li><a href="/services">Services</a></li>
+	<li><a href="/download" download>Download</a></li>
+	<li><a href="/logout">Logout</a></li>
+    <li><a href="javascript:history.back(); ">Go Back</a></li>
+</ul>
+</div>
+<div style="background-color: #00008B;z-index:100;">
+<label for="nav">Proxy's</label>
+<ul id="nav">
+	<li><a href="/prox/utopia">Utopia Proxy</a></li>
+	<li><a href="/prox/node">Node Unblocker</a></li>
+	<li><a href="/prox/phpprox">PHP Proxy</a></li>
+	<li><a href="/prox/holyub">HolyUB Links</a></li>
+	<li><a href="/prox/tacoproxy">Taco Proxy</a></li>
+	<li><a href="/prox/censordodge">Censordodge</a></li>
+</ul>
+<div id="goplay" style="display:none;">
+<label for="nav">Exclusive Proxy's</label>
+<ul id="nav">
+	<li><a href="/prox/nebula">Nebula Proxy</a></li>
+	<li><a href="/prox/hypertabs">HypertabsEX</a></li>
+	<li><a href="https://w9dll4-8080.csb.app/">Node Unblocker (By Us)</a></li>
+	<li><a href="https://mulaa.elude.wiki/">Censordodge Proxy #1</a></li>
+</ul>
+</div>
+<script>
+	function test1() {
+		var usrdat = document.getElementById("rank1").innerText;
+		document.getElementById("checkbtn").style.display = "none"
+		var udat2 = usrdat.split(": ");
+		var udat3 = udat2[1];
+		if ((udat3 == 'Admin') || (udat3 == 'Premium') || (udat3 == 'Beta Tester')) {
+			document.getElementById("goplay").style.display = "";
+		} else {
+			alert("Insufficient Rank")
+		}
+	}
+</script>
+<button onclick="test1(); " id="checkbtn">Exclusive Proxy's</button>
+<br>
+<label for="nav">Services</label>
+<ul id="nav">
+	<li><a href="javascript:loadinjector() ">Inject0r</a></li>
+	<li><a href="javascript:windwow() ">Bookmarklet Hub</a></li>
+</ul>
+</div>
+</body>

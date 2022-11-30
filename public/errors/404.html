@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<title>Alloy</title>
+<link rel="icon" type="image/x-icon" href="/images?q=test.ico">
+<style>
+	body {
+		background-color: #000000;
+	}
+	    #nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; }
+#nav li {
+	float: left; }
+#nav li a {
+	transition: 0.3s;
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; 
+	font-family: Geneva, Tahoma, sans-serif;
+	}
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+    label {
+    color: rgb(53,212,186);
+    font-weight: bold;
+    display: block;
+    font-family: Geneva, Tahoma, sans-serif;
+    text-align: center;
+    line-height: 150%;
+	font-size: 25;
+    }
+/* When hovering over li, apply styles to child a */
+#nav li:hover a {
+  background-color: #808080;
+  transition: 0.3s;
+}
+h1 {
+	color: #301934;
+	font-family: Geneva, Tahoma, sans-serif;
+	text-align: center;
+}
+h2 {
+	color: #301934;
+	font-family: Geneva, Tahoma, sans-serif;
+	text-align: center;
+}
+hr{
+    height: 1px;
+    background-color: #324ab2;
+    border: none;
+}
+</style>
+<body>
+<div style="position:absolute;top:0;left:0;width:100%;;">
+<ul id="nav">
+	<li><a href="/">Home</a></li>
+	<li><a href="/about">About</a></li>
+	<li><a href="/services">Services</a></li>
+	<li><a href="/download" download>Download</a></li>
+</ul>
+</div>
+<br><br><br><br> <!-- div is weird so use brs -->
+<h1>404 - Not Found - Alloy</h1>
+<h2>Dont worry, you didn't break the internet. We could not find the resource you requested.</h2>
+<h2><a href="/">Go to homepage</a></h2>
+</body>
